@@ -12,9 +12,9 @@ PlanetX::PlanetX()
 	description = "a giant planet with methane oceans and giant volcanoes";
 
 	// BEGIN Don't change these!
-	addEntity({ "Rover 1 explorer drone", -10 });
-	addEntity({ "Mysterious vapor being", 10 });
-	addEntity({ "Aquarium fish", 0 });
+	addEntity({ "Rover 1 explorer drone", -10 });	// mech Entity, don't rescue
+	addEntity({ "Mysterious vapor being", 10 });	// living bio, do rescue
+	addEntity({ "Aquarium fish", 0 });				// non-living bio, don't rescue
 	// END Don't change these!
 
 	// add your own occupants here
