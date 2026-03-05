@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="PA05-GameSpaces-1.vcxproj" Id="eac66672-f9a7-473d-ba4d-6ee1d5a172ea" />
+</Solution>
