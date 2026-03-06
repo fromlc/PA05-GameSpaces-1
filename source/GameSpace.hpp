@@ -50,8 +50,7 @@ public:
 
 	void addEntity(Entity ent) { vEntities.push_back(ent); }
 	size_t getEntityCount() { return vEntities.size(); }
-	Entity& getEntity(int index) { return vEntities.at(index); }
-	void clearEntities() { vEntities.clear(); }
+	Entity& getEntity(size_t index) { return vEntities.at(index); }
 
 	virtual void print() = 0;
 

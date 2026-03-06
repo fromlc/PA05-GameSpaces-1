@@ -18,6 +18,10 @@ PlanetX::PlanetX()
 	// END Don't change these!
 
 	// add your own occupants here
+
+	// mech Entities have a negative health value.
+	// non-living biological Entities have a health value of 0.
+	// living biological Entities have a positive health value.
 }
 
 // display status and occupant list 
