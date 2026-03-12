@@ -10,6 +10,7 @@ Spaceship::Spaceship() : speed(0), inOrbit(false), onTheWay(true)
 {
 	addEntity({ "Admiral LC", 10 });
 	addEntity({ "First Officer Kat", 10 });
+	addEntity({ "Yeoman Dawg", 10 });
 }
 
 // getters and setters
@@ -27,6 +28,17 @@ bool Spaceship::isOnTheWay() const { return onTheWay; }
 
 void Spaceship::setOnTheWay(bool going) { onTheWay = going; }
 
+// display list of beings on board ship
+void Spaceship::listOccupants()
+{
+	std::cout << name << " has " << getEntityCount() << " living beings aboard:\n";
+
+	for (auto& ent : vEntities) {
+		std::cout << "\t" << ent.name << "\n";
+	}
+	std::cout << "\n";
+}
+
 // display ship status
 void Spaceship::print() 
 {
@@ -35,7 +47,7 @@ void Spaceship::print()
 		std::cout << name 
 		    << " has arrived in the nick of time!\n\n"
 			<< name << " is assuming geosynchronous orbit.\n\n"
-			<< name << " is evacuating all living occupants from the planet!\n\n"
+			<< name << " is evacuating all living beings from the planet!\n\n"
 			<< "After frantic evacuation efforts, ";
 
 		return;
@@ -59,15 +71,4 @@ void Spaceship::print()
 	}
 }
 
-// display list of beings on board ship
-void Spaceship::listOccupants()
-{
-	std::cout << name << " has " << getEntityCount() << " living beings aboard:\n";
-	
-    for (auto& ent : vEntities)
-	{
-        std::cout << "\t" << ent.name << "\n";
-    }
-    std::cout << "\n";
-}
 
