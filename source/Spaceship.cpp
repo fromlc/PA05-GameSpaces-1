@@ -5,15 +5,20 @@
 
 #include <iostream>
 
+// constructor
 Spaceship::Spaceship() : speed(0), inOrbit(false), onTheWay(true)
 {
-	addEntity({ "Grand Poobah LC", 10 });
+	addEntity({ "Admiral LC", 10 });
+	addEntity({ "First Officer Kat", 10 });
 }
+
+// getters and setters
 
 int Spaceship::getSpeed() const { return speed; }
 
 void Spaceship::setSpeed(int spd) { speed = spd; }
 
+// app code uses boolean members to control output
 bool Spaceship::isInOrbit() const { return inOrbit; }
 
 void Spaceship::setInOrbit(bool orbiting) { inOrbit = orbiting; }
@@ -22,6 +27,7 @@ bool Spaceship::isOnTheWay() const { return onTheWay; }
 
 void Spaceship::setOnTheWay(bool going) { onTheWay = going; }
 
+// display ship status
 void Spaceship::print() 
 {
 	// messages in orbit around the planet
@@ -29,24 +35,8 @@ void Spaceship::print()
 		std::cout << name 
 		    << " has arrived in the nick of time!\n\n"
 			<< name << " is assuming geosynchronous orbit.\n\n"
-			<< name << " is evacuating the planet!\n\n";
-
-		std::cout << name << " has these occupants:\n";
-
-		size_t eCount = getEntityCount();
-		for (int i = 0; i < eCount; i++)
-		{
-			Entity ent = getEntity(i);
-			std::cout << "\t" << ent.name;
-
-			if (ent.health > 0)
-				std::cout << " is alive!\n";
-			else if (ent.health == 0)
-				std::cout << " is unfortunately dead :(\n";
-			else
-				std::cout << " is a mech\n";
-		}
-		std::cout << "\n";
+			<< name << " is evacuating all living occupants from the planet!\n\n"
+			<< "After frantic evacuation efforts, ";
 
 		return;
 	}
@@ -55,14 +45,29 @@ void Spaceship::print()
 	if (onTheWay)
 	{
 		std::cout << name << " is traveling at Warp " << speed 
-		    << " on a mission of mercy!\n\n";
+		    << " to the planet on a mission of mercy!\n\n";
+
+		listOccupants();
 	}
 	else
 	{
-		std::cout << "Evac mission complete!\n"
-			<< name << " is speeding away at Warp " << speed 
+		std::cout << "Evac mission complete!\n\n";
+		listOccupants();
+
+		std::cout << name << " is speeding away at Warp " << speed
 			<< " to escape the destruction!\n";
 	}
 }
 
+// display list of beings on board ship
+void Spaceship::listOccupants()
+{
+	std::cout << name << " has " << getEntityCount() << " living beings aboard:\n";
+	
+    for (auto& ent : vEntities)
+	{
+        std::cout << "\t" << ent.name << "\n";
+    }
+    std::cout << "\n";
+}
 

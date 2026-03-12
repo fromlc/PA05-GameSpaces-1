@@ -24,6 +24,8 @@ public:
     bool isOnTheWay() const;
     void setOnTheWay(bool going);
 
+    void listOccupants();
+
     void print();
 };
 

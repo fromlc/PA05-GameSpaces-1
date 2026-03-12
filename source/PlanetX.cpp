@@ -31,16 +31,13 @@ void PlanetX::print() { }
 void PlanetX::print(bool aliveOnly)
 {
 	if (!aliveOnly)
-		std::cout << "A meteor just hit " << name << "! All is lost!\n\n";
-
-	size_t eCount = getEntityCount();
+		std::cout << "A meteor just hit " << name << "! All is lost!\n"
+		    << "All living beings on the planet are in dire peril!\n\n";
 
 	std::cout << name << " has these occupants:\n";
 
-	for (int i = 0; i < eCount; i++)
+	for (auto& ent : vEntities)
 	{
-		Entity ent = getEntity(i);
-
 		if (aliveOnly && ent.health > 0)
 			continue;
 
