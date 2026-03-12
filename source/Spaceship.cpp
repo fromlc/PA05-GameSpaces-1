@@ -27,8 +27,9 @@ void Spaceship::print()
 	// messages in orbit around the planet
 	if (inOrbit) {
 		std::cout << name 
-		    << " has arrived and is assuming geosynchronous orbit around the planet.\n\n"
-			<< name << " is now evacuating the planet!\n\n";
+		    << " has arrived in the nick of time!\n\n"
+			<< name << " is assuming geosynchronous orbit.\n\n"
+			<< name << " is evacuating the planet!\n\n";
 
 		std::cout << name << " has these occupants:\n";
 
