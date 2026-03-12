@@ -13,6 +13,5 @@ public:
 	PlanetX();
 
 	void print();
-	//void print(const std::string& message);
 	void print(bool aliveOnly);
 };

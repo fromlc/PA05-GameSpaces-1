@@ -9,7 +9,7 @@
 PlanetX::PlanetX()
 {
 	name = "Planet X";
-	description = "a giant planet with methane oceans and giant volcanoes";
+	description = " is a giant planet with methane oceans and enormous volcanoes.";
 
 	// BEGIN Don't change these!
 	addEntity({ "Rover 1 explorer drone", -10 });	// mech Entity, don't rescue
@@ -31,11 +31,14 @@ void PlanetX::print() { }
 void PlanetX::print(bool aliveOnly)
 {
 	if (!aliveOnly)
-		std::cout << "A meteor just hit " << name << "! All is lost!\n"
-		    << "All living beings on the planet are in dire peril!\n\n";
+	{
+		std:: cout << name << description << "\n\n";
+		std::cout << "A meteor just hit " << name << "!\n"
+			<< name << " is about to explode!\n"
+		    << "All living beings on " << name << " are in dire peril!\n\n";
+	}
 
 	std::cout << name << " has these occupants:\n";
-
 	for (auto& ent : vEntities)
 	{
 		if (aliveOnly && ent.health > 0)
@@ -52,10 +55,4 @@ void PlanetX::print(bool aliveOnly)
 	}
 	std::cout << "\n";
 }
-
-// display message, then status and occupant list 
-//void PlanetX::print(const std::string& message)
-//{
-//	std::cout << message << ".\n";
-//}
 

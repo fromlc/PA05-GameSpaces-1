@@ -63,11 +63,11 @@ void Spaceship::print()
 	}
 	else
 	{
-		std::cout << "Evac mission complete!\n\n";
+		std::cout << "Evacuation mission complete!\n\n";
 		listOccupants();
 
 		std::cout << name << " is speeding away at Warp " << speed
-			<< " to escape the destruction!\n";
+			<< " to escape total destruction!\n";
 	}
 }
 
