@@ -24,10 +24,16 @@
     <ClCompile Include="source\PA05-GameSpaces-1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\Spaceship.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\PlanetX.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Spaceship.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

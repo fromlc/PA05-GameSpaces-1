@@ -40,17 +40,40 @@ protected:
 	std::vector<Entity> vEntities;
 
 public:
-	GameSpace() { }
+	GameSpace()
+	{
+	}
 
-	const std::string& getName() const { return name; }
-	void setName(const std::string& nameStr) { description = nameStr; }
+	const std::string& getName() const
+	{
+		return name;
+	}
+	void setName(const std::string& nameStr)
+	{
+		description = nameStr;
+	}
 
-	const std::string& getDescription() const { return description; };
-	void setDescription(const std::string& descStr) { description = descStr; }
+	const std::string& getDescription() const
+	{
+		return description;
+	};
+	void setDescription(const std::string& descStr)
+	{
+		description = descStr;
+	}
 
-	void addEntity(Entity ent) { vEntities.push_back(ent); }
-	size_t getEntityCount() { return vEntities.size(); }
-	Entity& getEntity(size_t index) { return vEntities.at(index); }
+	void addEntity(Entity ent)
+	{
+		vEntities.push_back(ent);
+	}
+	size_t getEntityCount()
+	{
+		return vEntities.size();
+	}
+	Entity& getEntity(size_t index)
+	{
+		return vEntities.at(index);
+	}
 
 	virtual void print() = 0;
 

@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-// PlanetX : derived class definition, base class GameSpace
+// PlanetX.cpp : derived class definition, base class GameSpace
 //------------------------------------------------------------------------------
 #include "PlanetX.h"
 

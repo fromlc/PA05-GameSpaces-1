@@ -130,9 +130,11 @@
     <ClCompile Include="source\GameSpace.hpp" />
     <ClCompile Include="source\PA05-GameSpaces-1.cpp" />
     <ClCompile Include="source\PlanetX.cpp" />
+    <ClCompile Include="source\Spaceship.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\PlanetX.h" />
+    <ClInclude Include="source\Spaceship.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
