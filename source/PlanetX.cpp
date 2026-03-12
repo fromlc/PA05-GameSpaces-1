@@ -24,16 +24,26 @@ PlanetX::PlanetX()
 	// living biological Entities have a positive health value.
 }
 
+// must override pure virtual function
+void PlanetX::print() { }
+
 // display status and occupant list 
-void PlanetX::print()
+void PlanetX::print(bool aliveOnly)
 {
+	if (!aliveOnly)
+		std::cout << "A meteor just hit " << name << "! All is lost!\n\n";
+
 	size_t eCount = getEntityCount();
 
-	std::cout << name << " has " << eCount << " occupants:\n";
+	std::cout << name << " has these occupants:\n";
 
 	for (int i = 0; i < eCount; i++)
 	{
 		Entity ent = getEntity(i);
+
+		if (aliveOnly && ent.health > 0)
+			continue;
+
 		std::cout << "\t" << ent.name;
 		
 		if (ent.health > 0)
@@ -47,9 +57,8 @@ void PlanetX::print()
 }
 
 // display message, then status and occupant list 
-void PlanetX::print(const std::string& message)
-{
-	std::cout << name << " is a " << description << ".\n";
-	print();
-}
+//void PlanetX::print(const std::string& message)
+//{
+//	std::cout << message << ".\n";
+//}
 

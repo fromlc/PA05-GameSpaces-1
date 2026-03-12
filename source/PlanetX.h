@@ -3,6 +3,8 @@
 //------------------------------------------------------------------------------
 #include "GameSpace.hpp"
 
+#include <string>
+
 class PlanetX : public GameSpace
 //------------------------------------------------------------------------------
 {
@@ -11,5 +13,6 @@ public:
 	PlanetX();
 
 	void print();
-	void print(const std::string& message);
+	//void print(const std::string& message);
+	void print(bool aliveOnly);
 };

@@ -57,6 +57,7 @@ public:
 	{
 		return description;
 	};
+
 	void setDescription(const std::string& descStr)
 	{
 		description = descStr;
@@ -66,10 +67,12 @@ public:
 	{
 		vEntities.push_back(ent);
 	}
+
 	size_t getEntityCount()
 	{
 		return vEntities.size();
 	}
+
 	Entity& getEntity(size_t index)
 	{
 		return vEntities.at(index);

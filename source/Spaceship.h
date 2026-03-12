@@ -10,6 +10,7 @@ class Spaceship : public GameSpace
 private:
     int speed;
     bool inOrbit;
+    bool onTheWay;
 
 public:
     Spaceship();
@@ -19,6 +20,9 @@ public:
 
     bool isInOrbit() const;
     void setInOrbit(bool orbiting);
+
+    bool isOnTheWay() const;
+    void setOnTheWay(bool going);
 
     void print();
 };
