@@ -50,7 +50,7 @@ public:
 	}
 	void setName(const std::string& nameStr)
 	{
-		description = nameStr;
+		name = nameStr;
 	}
 
 	const std::string& getDescription() const

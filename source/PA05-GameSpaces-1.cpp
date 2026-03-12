@@ -9,8 +9,10 @@
 int main()
 {
     PlanetX px;
+    px.setName("Planet X");
     px.print();
 
     Spaceship ship;
+    ship.setName("The Mothership");
     ship.print();
 }
