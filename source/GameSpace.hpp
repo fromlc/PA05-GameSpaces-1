@@ -10,9 +10,9 @@
 //------------------------------------------------------------------------------
 // constants
 //------------------------------------------------------------------------------
-const int HEALTH_LIVE = 1;
-const int HEALTH_DEAD = 0;
-const int HEALTH_MECH = -1;
+constexpr int HEALTH_LIVE = 1;
+constexpr int HEALTH_DEAD = 0;
+constexpr int HEALTH_MECH = -1;
 
 class Entity
 //------------------------------------------------------------------------------
