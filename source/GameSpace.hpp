@@ -52,7 +52,7 @@ public:
 	GameSpace() { }
 
 	const std::string& getName() const { return name; }
-	void setName(const std::string& nameStr) { description = nameStr; }
+	void setName(const std::string& nameStr) { name = nameStr; }
 
 	const std::string& getDescription() const { return description; };
 	void setDescription(const std::string& descStr) { description = descStr; }
