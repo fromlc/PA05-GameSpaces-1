@@ -14,16 +14,13 @@ PlanetX::PlanetX()
 void PlanetX::print()
 {
 	std::cout << name << description << "\n";
+	std::cout << name << " has " << vEntities.size() << " occupants:\n";
 
-	size_t eCount = getEntityCount();
-	std::cout << name << " has " << eCount << " occupants:\n";
-
-	for (size_t i = 0; i < eCount; i++)
+	for (Entity e : vEntities)
 	{
-		Entity ent = getEntity(i);
-		std::cout << "\t" << ent.getName();
+		std::cout << "\t" << e.getName();
 		
-		int eHealth = ent.getHealth();
+		int eHealth = e.getHealth();
 		if (eHealth > 0)
 			std::cout << " is alive!\n";
 		else if (eHealth == 0)

@@ -67,7 +67,21 @@ public:
 
 	}
 
+	// display list of beings on board ship
+	void listOccupants()
+	{
+		std::cout << name << " has " << getEntityCount() << " aboard:\n";
+
+		for (auto& ent : vEntities) {
+			std::cout << "\t" << ent.getName() << "\n";
+		}
+		std::cout << "\n";
+	}
+
+	// derived classes must provide
 	virtual void print() = 0;
+
+
 
 	void print(const std::string& messageStr)
 	{
