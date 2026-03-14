@@ -7,12 +7,21 @@
 #include <string>
 #include <vector>
 
+//------------------------------------------------------------------------------
+// constants
+//------------------------------------------------------------------------------
+const int HEALTH_LIVE = 1;
+const int HEALTH_DEAD = 0;
+const int HEALTH_MECH = -1;
+
 class Entity
 //------------------------------------------------------------------------------
 {
 private:
 	std::string name;
 	int health;
+
+
 
 public:
 	// default constructor
@@ -60,12 +69,6 @@ public:
 	void addEntity(Entity ent) { vEntities.push_back(ent); }
 	size_t getEntityCount() { return vEntities.size(); }
 	Entity& getEntity(size_t index) { return vEntities.at(index); }
-
-	// removes 
-	size_t removeEntityIf(int healthCondition)
-	{
-
-	}
 
 	// display list of beings on board ship
 	void listOccupants()

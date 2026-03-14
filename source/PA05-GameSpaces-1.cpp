@@ -59,12 +59,9 @@ int main()
 	// copy living beings from planet vector to ship vector
 	for (Entity& e : g_planetEnts)
 	{
-		if (e.getHealth() >= HEALTH_MIN_ALIVE)
+		if (e.getHealth() >= HEALTH_LIVE)
 			ship.addEntity(e);
 	}
-
-	// remove living beings from planet vector
-
 
 	// display ship status during rescue
 	ship.setDescription(SHIP_RESCUE);
@@ -73,6 +70,9 @@ int main()
 	// display ship status after rescue
 	ship.setDescription(SHIP_FINAL);
 	ship.print();
+
+	// remove living beings from planet vector
+	px.removeLiveEntities();
 
 	// display planet status after rescue
 	px.setDescription(PLANET_FINAL);

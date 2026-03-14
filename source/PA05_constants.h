@@ -8,9 +8,6 @@
 //------------------------------------------------------------------------------
 // constants
 //------------------------------------------------------------------------------
-// Entity
-constexpr int HEALTH_MIN_ALIVE = 1;
-
 // Planet and Spaceship Names
 const std::string PLANET_NAME = "Planet X";
 const std::string SHIP_NAME = "The Mothership";
@@ -23,9 +20,8 @@ const std::string PLANET_INITIAL =
 + PLANET_NAME + " is about to explode!\n"
 + "All living beings on " + PLANET_NAME + " are in dire peril!\n";
 const std::string PLANET_FINAL =
-+"Meanwhile, " + PLANET_NAME + " provides an excellent fireworks display!\n"
-+ "All mechs and non-living bios are buried in oceans of magma as\n"
-+ "everyone on " + SHIP_NAME + " watches in silence.\n"
+" provides an excellent fireworks display!\n"
++ SHIP_NAME + "'s rescuers and rescued alike watch in relieved silence.\n"
 + "\nGoodbye " + PLANET_NAME + "!\n";
 
 // Spaceship status

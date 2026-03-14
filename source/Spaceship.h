@@ -13,9 +13,11 @@ private:
 public:
     Spaceship();
 
+    // getters and setters
     int getSpeed() const;
     void setSpeed(int spd);
 
+    // display status
     void print();
 };
 

@@ -10,5 +10,9 @@ private:
 public:
 	PlanetX();
 
+	// remove live Entities from Entity vector
+	void removeLiveEntities();
+
+	// display status
 	void print();
 };
