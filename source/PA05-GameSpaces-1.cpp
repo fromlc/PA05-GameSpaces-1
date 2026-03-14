@@ -8,7 +8,11 @@
 //------------------------------------------------------------------------------
 const std::string PLANET_NAME = "Planet X";
 const std::string PLANET_IS =
-	" is a giant planet with methane oceans and enormous active volcanoes.";
+	" is a giant planet with methane oceans and enormous active volcanoes.\n";
+const std::string PLANET_INITIAL =
+	+ "A meteor just hit " + PLANET_NAME + "! "
+	+ PLANET_NAME + " is about to explode!\n"
+	+ "All living beings on " + PLANET_NAME + " are in dire peril!\n";
 
 //------------------------------------------------------------------------------
 // entry point
@@ -17,7 +21,7 @@ int main()
 {
     PlanetX px;
     px.setName(PLANET_NAME);
-    px.setDescription(PLANET_IS);
+    px.setDescription(PLANET_IS + PLANET_INITIAL);
 
 	// BEGIN Don't change these!
 	// mech Entity, don't rescue
