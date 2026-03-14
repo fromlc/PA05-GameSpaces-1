@@ -29,6 +29,13 @@ public:
 	//	name = rhsEnt.name;
 	//	health = rhsEnt.health;
 	//}
+
+	// getters and setters
+	const std::string& getName() const { return name; }
+	void setName(const std::string& eName) { name = eName; }
+
+	int getHealth() const { return health; }
+	void setHealth(int eHealth) { health = eHealth; }
 };
 
 class GameSpace
@@ -51,6 +58,12 @@ public:
 	void addEntity(Entity ent) { vEntities.push_back(ent); }
 	size_t getEntityCount() { return vEntities.size(); }
 	Entity& getEntity(size_t index) { return vEntities.at(index); }
+
+	// removes 
+	size_t removeEntityIf(int healthCondition)
+	{
+
+	}
 
 	virtual void print() = 0;
 
