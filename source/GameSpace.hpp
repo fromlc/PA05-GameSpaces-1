@@ -32,13 +32,6 @@ public:
 		, health(healthPts)
 	{ }
 
-	//copy constructor
-	Entity(Entity& rhsEnt)
-	{
-		name = rhsEnt.name;
-		health = rhsEnt.health;
-	}
-
 	// getters and setters
 	const std::string& getName() const { return name; }
 	void setName(const std::string& eName) { name = eName; }
