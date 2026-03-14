@@ -3,14 +3,21 @@
 //------------------------------------------------------------------------------
 #include "PlanetX.h"
 
+//------------------------------------------------------------------------------
+// constants
+//------------------------------------------------------------------------------
+const std::string PLANET_NAME = "Planet X";
+const std::string PLANET_IS =
+	" is a giant planet with methane oceans and enormous active volcanoes.";
+
+//------------------------------------------------------------------------------
 // entry point
 //------------------------------------------------------------------------------
 int main()
 {
     PlanetX px;
-    px.setName("Planet X");
-    px.setDescription(
-        " is a giant planet with methane oceans and enormous active volcanoes.");
+    px.setName(PLANET_NAME);
+    px.setDescription(PLANET_IS);
 
 	// BEGIN Don't change these!
 	// mech Entity, don't rescue
