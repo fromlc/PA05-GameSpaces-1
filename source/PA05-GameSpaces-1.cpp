@@ -53,7 +53,8 @@ int main()
 		ship.addEntity(e);
 
 	// display initial ship status
-	ship.setDescription(SHIP_IS + SHIP_INITIAL);
+	ship.setDescription(SHIP_IS + SHIP_INITIAL + SHIP_SPEED_WARP);
+	ship.setSpeed(8);
 	ship.print();
 
 	// copy living beings from planet vector to ship vector
@@ -64,11 +65,13 @@ int main()
 	}
 
 	// display ship status during rescue
-	ship.setDescription(SHIP_RESCUE);
+	ship.setDescription(SHIP_RESCUE + SHIP_SPEED_ORBIT);
+	ship.setSpeed(0);
 	ship.print();
 
 	// display ship status after rescue
-	ship.setDescription(SHIP_FINAL);
+	ship.setDescription(SHIP_FINAL + SHIP_SPEED_WARP);
+	ship.setSpeed(10);
 	ship.print();
 
 	// remove living beings from planet vector

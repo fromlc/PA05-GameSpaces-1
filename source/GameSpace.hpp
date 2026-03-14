@@ -18,10 +18,8 @@ class Entity
 //------------------------------------------------------------------------------
 {
 private:
-	std::string name;
 	int health;
-
-
+	std::string name;
 
 public:
 	// default constructor
