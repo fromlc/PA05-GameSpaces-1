@@ -5,9 +5,12 @@
 
 #include <iostream>
 
-// constructor
+// constructors
 Spaceship::Spaceship() : speed(0)
 { }
+
+Spaceship::Spaceship(const std::string& sName) : speed(0)
+{ name = sName; }
 
 // getters and setters
 

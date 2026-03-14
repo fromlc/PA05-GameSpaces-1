@@ -11,7 +11,10 @@ private:
     int speed;
 
 public:
+    // constructors
     Spaceship();
+
+    Spaceship(const std::string& sName);
 
     // getters and setters
     int getSpeed() const;

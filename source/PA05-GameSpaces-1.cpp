@@ -31,8 +31,7 @@ Entity g_shipEnts[] =
 //------------------------------------------------------------------------------
 int main()
 {
-	PlanetX px;
-	px.setName(PLANET_NAME);
+	PlanetX px(PLANET_NAME);
 
 	// populate planet
 	for (Entity& e : g_planetEnts)
@@ -45,8 +44,7 @@ int main()
 	// display initial planet status
     px.print();
 
-	Spaceship ship;
-	ship.setName(SHIP_NAME);
+	Spaceship ship(SHIP_NAME);
 
 	// populate ship
 	for (Entity& e : g_shipEnts)

@@ -5,8 +5,10 @@
 
 #include <iostream>
 
-// constructor
+// constructors
 PlanetX::PlanetX() { }
+
+PlanetX::PlanetX(const std::string& pName) { name = pName; }
 
 // removes live Entities from vector
 void PlanetX::removeLiveEntities()

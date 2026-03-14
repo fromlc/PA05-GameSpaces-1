@@ -35,15 +35,15 @@ const std::string SHIP_SPEED_ORBIT = "Speed: Standard orbital speed ";
 const std::string SHIP_IS =
 " is a Galactic-class battle carrier monitoring deep space frequencies.\n";
 const std::string SHIP_INITIAL =
-SHIP_NAME + " receives a distress call from " + PLANET_NAME + "!\n"
+"A faint distress call from " + PLANET_NAME + " is received and acknowledged!\n"
 + SHIP_NAME + " recalls all starfighters and speeds to "
 + PLANET_NAME + " on a mission of mercy!\n";
 
 const std::string SHIP_RESCUE =
 " arrives in the nick of time!\n"
-+ SHIP_NAME + " assumes geosynchronous orbit around "
+"The big carrier assumes geosynchronous orbit around "
 + PLANET_NAME + ".\n"
-+ SHIP_NAME + " frantically beams all living beings aboard!\n"
++ "Its trusty crew quickly beams all living beings aboard!\n"
 + "Mission complete! All living beings are safe aboard "
 + SHIP_NAME + ".\n";
 
