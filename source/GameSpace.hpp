@@ -73,7 +73,6 @@ public:
 		for (Entity& e : vEntities) {
 			std::cout << "\t" << e.getName() << "\n";
 		}
-		std::cout << "\n";
 	}
 
 	// derived classes must provide
