@@ -133,6 +133,7 @@
     <ClCompile Include="source\Spaceship.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\PA05_constants.h" />
     <ClInclude Include="source\PlanetX.h" />
     <ClInclude Include="source\Spaceship.h" />
   </ItemGroup>
