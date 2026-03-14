@@ -54,7 +54,7 @@ int main()
 
 	// display initial ship status
 	ship.setDescription(SHIP_IS + SHIP_INITIAL + SHIP_SPEED_WARP);
-	ship.setSpeed(8);
+	ship.setSpeed(SHIP_SPEED_RESCUE);
 	ship.print();
 
 	// copy living beings from planet vector to ship vector
@@ -71,7 +71,7 @@ int main()
 
 	// display ship status after rescue
 	ship.setDescription(SHIP_FINAL + SHIP_SPEED_WARP);
-	ship.setSpeed(10);
+	ship.setSpeed(SHIP_SPEED_ESCAPE);
 	ship.print();
 
 	// remove living beings from planet vector

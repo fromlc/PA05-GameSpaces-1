@@ -27,6 +27,8 @@ const std::string PLANET_FINAL =
 
 // Spaceship speeds
 const std::string SHIP_SPEED_WARP = "Speed: Warp ";
+constexpr int SHIP_SPEED_RESCUE = 8;
+constexpr int SHIP_SPEED_ESCAPE = 10;
 const std::string SHIP_SPEED_ORBIT = "Speed: Standard orbital speed ";
 
 // Spaceship status
