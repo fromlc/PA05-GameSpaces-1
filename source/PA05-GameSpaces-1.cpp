@@ -23,7 +23,7 @@ Entity g_planetEnts[] =
 Entity g_shipEnts[] =
 	{ { "Admiral LC", 10 }
 	, { "First Officer Kat", 10 }
-	, { "Yeoman Dawg", 10 }
+	, { "Yeoman Dawg", -10 }
 };
 
 //------------------------------------------------------------------------------
