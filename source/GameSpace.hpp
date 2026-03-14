@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-// GameSpace.hpp : base class with Entity vector
+// GameSpace.hpp : abstract base class with Entity vector
 //------------------------------------------------------------------------------
 #pragma once
 
