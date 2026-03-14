@@ -15,29 +15,36 @@ const std::string PLANET_INITIAL =
 	+ "All living beings on " + PLANET_NAME + " are in dire peril!\n";
 
 //------------------------------------------------------------------------------
+// globals
+//------------------------------------------------------------------------------
+// mech Entities have a negative health value.
+// non-living biological Entities have a health value of 0.
+// living biological Entities have a positive health value.
+
+// these Entities are used for grading, don't change them
+Entity g_aEnts[] = 
+	{ { "Rover 1 explorer drone", -10 }		// mech, don't rescue
+	, { "Mysterious vapor being", 10 }		// living bio, do rescue	
+	, { "Aquarium fish", 0 }				// non-living bio, don't rescue
+// add your own planet Entities here
+};
+
+//------------------------------------------------------------------------------
 // entry point
 //------------------------------------------------------------------------------
 int main()
 {
     PlanetX px;
+
+	// set initial planet status
     px.setName(PLANET_NAME);
     px.setDescription(PLANET_IS + PLANET_INITIAL);
 
-	// BEGIN Don't change these!
-	// mech Entity, don't rescue
-	px.addEntity({ "Rover 1 explorer drone", -10 });
-	// living bio Entity, do rescue
-	px.addEntity({ "Mysterious vapor being", 10 });
-	// non-living bio, don't rescue
-	px.addEntity({ "Aquarium fish", 0 });
-	// END Don't change these!
+	// populate planet
+	for (Entity& e : g_aEnts)
+		px.addEntity(e);
 
-	// add your own occupants here
-
-	// mech Entities have a negative health value.
-	// non-living biological Entities have a health value of 0.
-	// living biological Entities have a positive health value.
-
-	// Initial planet status
+	// display initial planet status
     px.print();
+
 }
