@@ -4,15 +4,17 @@
 #pragma once
 
 #include <iostream>
+#include <string>
 #include <vector>
 
 class Entity
 //------------------------------------------------------------------------------
 {
-public:
+private:
 	std::string name;
 	int health;
 
+public:
 	// default constructor
 	Entity() : name("default mech"), health(-1)
 	{ }
