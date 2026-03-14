@@ -64,8 +64,16 @@ public:
 	// display list of beings on board ship
 	void listOccupants()
 	{
-		for (Entity& e : vEntities) {
-			std::cout << "\t" << e.getName() << "\n";
+		for (Entity& e : vEntities) 
+		{
+			std::cout << "\t" << e.getName();
+
+			if (e.getHealth() >= HEALTH_LIVE)
+				std::cout << " is alive!\n";
+			else if (e.getHealth() == HEALTH_DEAD)
+				std::cout << " is unfortunately dead :-(\n";
+			else
+				std::cout << " is a mech <:)\n";
 		}
 	}
 
