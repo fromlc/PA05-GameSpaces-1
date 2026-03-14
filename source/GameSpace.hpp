@@ -34,9 +34,11 @@ public:
 
 	// getters and setters
 	const std::string& getName() const { return name; }
+
 	void setName(const std::string& eName) { name = eName; }
 
 	int getHealth() const { return health; }
+
 	void setHealth(int eHealth) { health = eHealth; }
 };
 
@@ -49,16 +51,23 @@ protected:
 	std::vector<Entity> vEntities;
 
 public:
-	GameSpace() { }
+	// constructor
+	GameSpace() = default;
+
+	// getters and setters
 
 	const std::string& getName() const { return name; }
+
 	void setName(const std::string& nameStr) { name = nameStr; }
 
 	const std::string& getDescription() const { return description; };
+
 	void setDescription(const std::string& descStr) { description = descStr; }
 
 	void addEntity(Entity ent) { vEntities.push_back(ent); }
+
 	size_t getEntityCount() { return vEntities.size(); }
+
 	Entity& getEntity(size_t index) { return vEntities.at(index); }
 
 	// display list of beings on board ship
