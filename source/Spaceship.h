@@ -5,10 +5,13 @@
 
 #include "GameSpace.hpp"
 
+#include <string>
+
 class Spaceship : public GameSpace
 {
 private:
     int speed;
+    std::string speedStr;
 
 public:
     Spaceship();
@@ -16,6 +19,9 @@ public:
     // getters and setters
     int getSpeed() const;
     void setSpeed(int spd);
+
+    const std::string& getSpeedStr() const;
+    void setSpeedStr(const std::string& spdStr);
 
     // display status
     void print();
