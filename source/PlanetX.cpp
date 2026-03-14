@@ -27,6 +27,8 @@ PlanetX::PlanetX()
 // display status and occupant list 
 void PlanetX::print()
 {
+	std::cout << name << description << "\n";
+
 	size_t eCount = getEntityCount();
 
 	std::cout << name << " has " << eCount << " occupants:\n";
