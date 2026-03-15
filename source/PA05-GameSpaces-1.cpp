@@ -20,6 +20,7 @@ Entity g_planetEnts[] =
 // add your own planet Entities here
 };
 
+// add/delete ship Entities here
 Entity g_shipEnts[] =
 	{ { "Admiral LC", 10 }
 	, { "First Officer Kat", 10 }
