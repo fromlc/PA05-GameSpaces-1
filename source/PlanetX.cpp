@@ -13,15 +13,25 @@ PlanetX::PlanetX(const std::string& pName) { name = pName; }
 // removes live Entities from vector
 void PlanetX::removeLiveEntities()
 {
-	std::vector<Entity>::iterator newEnd =
+	// std::remove_if() has been available since C++ 98!
+
+	//std::vector<Entity>::iterator newEnd =
+	auto newEnd =
 		std::remove_if(vEntities.begin(), vEntities.end(),
 					   [](Entity& e)
 					   {
 						   return (e.getHealth() >= HEALTH_LIVE);
 					   });
 
-	if (newEnd != vEntities.end())
-		vEntities.erase(newEnd, vEntities.end());
+	// remove_if() moves elements to the end of the vector, but 
+	// does not delete them so call .erase() to trim removed
+	// elements off the end of the vector
+
+	vEntities.erase(newEnd, vEntities.end());
+
+	// C++ 20 offers std::erase_if() that combines remove_if() and .erase()
+	size_t nErased = std::erase_if(vEntities,
+				  [](Entity& e) { return (e.getHealth() >= HEALTH_LIVE); });
 }
 
 // display status and occupant list 

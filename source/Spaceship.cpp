@@ -15,6 +15,7 @@ Spaceship::Spaceship(const std::string& sName) : speed(0)
 // getters and setters
 
 int Spaceship::getSpeed() const { return speed; }
+
 void Spaceship::setSpeed(int spd) { speed = spd; }
 
 // display status and manifest
