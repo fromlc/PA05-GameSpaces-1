@@ -1,9 +1,11 @@
 //------------------------------------------------------------------------------
 // PlanetX : derived class definition, base class GameSpace
 //------------------------------------------------------------------------------
+#include "GameSpace.hpp"
 #include "PlanetX.h"
 
 #include <iostream>
+#include <string>
 
 // constructor
 PlanetX::PlanetX()
