@@ -5,6 +5,8 @@
 
 #include "GameSpace.hpp"
 
+#include <string>
+
 class Spaceship : public GameSpace
 {
 private:

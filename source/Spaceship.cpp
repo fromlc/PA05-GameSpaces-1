@@ -4,6 +4,7 @@
 #include "Spaceship.h"
 
 #include <iostream>
+#include <string>
 
 // constructors
 Spaceship::Spaceship() : speed(0)
